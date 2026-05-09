@@ -1,104 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
     <title>Shubham Shinde</title>
 
     <style>
 
-        body {
+        * {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background: #0a0a0a;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            background: #050505;
+
             color: white;
+
+            font-family: Arial, sans-serif;
+
+            line-height: 1.7;
+
             overflow-x: hidden;
         }
 
-        .hero {
+        .container {
 
-            height: 100vh;
+            width: 90%;
 
-            display: flex;
-            flex-direction: column;
+            max-width: 1300px;
 
-            justify-content: center;
-            align-items: center;
+            margin: auto;
 
-            text-align: center;
-
-            background:
-            linear-gradient(
-            rgba(0,0,0,0.7),
-            rgba(0,0,0,0.9)
-            ),
-
-            url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1974&auto=format&fit=crop');
-
-            background-size: cover;
-            background-position: center;
+            padding-bottom: 100px;
         }
 
-        h1 {
+        section {
 
-            font-size: 70px;
-            margin-bottom: 10px;
-
-            color: #00e5ff;
-
-            text-shadow:
-            0 0 10px #00e5ff,
-            0 0 20px #00e5ff;
+            margin-top: 80px;
         }
 
-        h2 {
+        h1, h2 {
 
             color: #ff003c;
-            font-weight: normal;
+
+            margin-bottom: 25px;
+
+            text-align: center;
         }
 
-        .skills {
+        .banner img {
+
+            width: 100%;
+
+            border-radius: 20px;
+        }
+
+        .typing {
+
+            text-align: center;
 
             margin-top: 30px;
         }
 
-        .skills span {
+        .typing img {
 
-            border: 1px solid #00e5ff;
-
-            padding: 10px 20px;
-
-            margin: 10px;
-
-            display: inline-block;
-
-            border-radius: 30px;
-
-            color: #00e5ff;
+            max-width: 100%;
         }
 
-        .btn {
+        .terminal {
 
-            margin-top: 40px;
+            background: #000000;
 
-            padding: 15px 30px;
+            border: 1px solid #8B0000;
 
-            background: #ff003c;
+            padding: 30px;
 
-            color: white;
+            border-radius: 15px;
 
-            text-decoration: none;
+            overflow-x: auto;
+
+            color: #00ff99;
+
+            font-family: monospace;
+
+            white-space: pre-wrap;
+        }
+
+        .tech-stack,
+        .skills,
+        .connect {
+
+            text-align: center;
+        }
+
+        .tech-stack img,
+        .skills img,
+        .connect img {
+
+            margin: 10px;
+        }
+
+        .stats img,
+        .graph img,
+        .snake img {
+
+            width: 100%;
+
+            border-radius: 15px;
+        }
+
+        .yaml-box,
+        .workflow,
+        .quote {
+
+            background: #0d0d0d;
+
+            border-left: 5px solid #ff003c;
+
+            padding: 25px;
 
             border-radius: 10px;
 
-            transition: 0.3s;
+            overflow-x: auto;
+
+            font-family: monospace;
+
+            white-space: pre-wrap;
         }
 
-        .btn:hover {
+        .footer {
 
-            background: #00e5ff;
-            color: black;
+            margin-top: 100px;
+        }
+
+        .footer img {
+
+            width: 100%;
         }
 
     </style>
@@ -107,33 +152,248 @@
 
 <body>
 
-    <section class="hero">
+    <div class="container">
 
-        <h1>Shubham Shinde</h1>
+        <!-- Banner -->
 
-        <h2>
-            Middleware Engineer | Linux | AWS | DevOps
-        </h2>
+        <section class="banner">
 
-        <div class="skills">
+            <img src="https://capsule-render.vercel.app/api?type=waving&height=320&text=Shubham%20Shinde&fontSize=65&fontColor=ffffff&animation=twinkling&color=0:000000,25:140000,50:3b0000,75:8B0000,100:ff003c&desc=Middleware%20Engineer%20|%20Linux%20|%20AWS%20|%20DevOps%20|%20IAM%20|%20PAM&descAlignY=65&descSize=18">
 
-            <span>Linux</span>
-            <span>AWS</span>
-            <span>WebLogic</span>
-            <span>DevOps</span>
-            <span>IAM</span>
-            <span>PAM</span>
+        </section>
 
-        </div>
+        <!-- Typing Animation -->
 
-        <a class="btn"
-        href="https://github.com/shubham990918">
+        <section class="typing">
 
-            Visit GitHub
+            <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=2500&pause=1000&color=FF003C&center=true&vCenter=true&width=1000&lines=$+Booting+Cloud+Infrastructure...;$+Loading+DevOps+Modules...;$+Initializing+Security+Protocols...;$+Middleware+Engineer+Ready.;$+Automation+is+Power.">
 
-        </a>
+        </section>
 
-    </section>
+        <!-- About -->
+
+        <section>
+
+            <h2>ABOUT_ME</h2>
+
+            <div class="terminal">
+
+┌──(shubham㉿middleware)-[~/profile]
+└─$ whoami
+
+Shubham Shinde
+
+┌──(shubham㉿middleware)-[~/profile]
+└─$ cat designation.txt
+
+Middleware Engineer
+
+┌──(shubham㉿middleware)-[~/profile]
+└─$ cat specialization.log
+
+• Linux Administration
+• AWS Cloud Infrastructure
+• DevOps Automation
+• Docker & Kubernetes
+• IAM / PAM Security
+• Infrastructure as Code
+• CI/CD Pipelines
+• Monitoring & Logging
+• Ansible and Terraform
+
+┌──(shubham㉿middleware)-[~/profile]
+└─$ echo $STATUS
+
+Building scalable, secure, and automated systems.
+
+            </div>
+
+        </section>
+
+        <!-- Tech Stack -->
+
+        <section>
+
+            <h2>TECH_STACK</h2>
+
+            <div class="tech-stack">
+
+                <img src="https://skillicons.dev/icons?i=linux,aws,docker,kubernetes,bash,terraform,git,github,githubactions,jenkins,ansible,prometheus,grafana,py,vim"/>
+
+            </div>
+
+        </section>
+
+        <!-- Core Skills -->
+
+        <section>
+
+            <h2>CORE_SKILLS</h2>
+
+            <div class="skills">
+
+                <img src="https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=ff003c"/>
+
+                <img src="https://img.shields.io/badge/Oracle%20WebLogic-000000?style=for-the-badge&logo=Oracle&logoColor=ff003c"/>
+
+                <img src="https://img.shields.io/badge/AWS-111111?style=for-the-badge&logo=amazonaws&logoColor=ff003c"/>
+
+                <img src="https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=ff003c"/>
+
+                <img src="https://img.shields.io/badge/Kubernetes-111111?style=for-the-badge&logo=kubernetes&logoColor=ff003c"/>
+
+                <img src="https://img.shields.io/badge/Terraform-000000?style=for-the-badge&logo=terraform&logoColor=ff003c"/>
+
+                <img src="https://img.shields.io/badge/Jenkins-111111?style=for-the-badge&logo=jenkins&logoColor=ff003c"/>
+
+                <img src="https://img.shields.io/badge/Ansible-000000?style=for-the-badge&logo=ansible&logoColor=ff003c"/>
+
+            </div>
+
+        </section>
+
+        <!-- Analytics -->
+
+        <section class="stats">
+
+            <h2>GITHUB_ANALYTICS</h2>
+
+            <img src="https://github-readme-streak-stats.herokuapp.com?user=shubham990918&theme=highcontrast&background=000000&ring=FF003C&fire=FF003C&currStreakLabel=FF003C&border=8B0000"/>
+
+        </section>
+
+        <!-- Current Operations -->
+
+        <section>
+
+            <h2>CURRENT_OPERATIONS</h2>
+
+            <div class="yaml-box">
+
+infrastructure:
+  cloud: AWS
+  os: Linux
+  orchestration: Kubernetes
+  automation: Terraform + Ansible
+  ci_cd: Jenkins
+  monitoring: Prometheus + Grafana
+
+security:
+  iam: ENABLED
+  pam: ENABLED
+  hardening: ACTIVE
+
+status:
+  automation_level: MAXIMUM
+  infrastructure_state: STABLE
+  deployment_status: ONLINE
+
+            </div>
+
+        </section>
+
+        <!-- Workflow -->
+
+        <section>
+
+            <h2>DEVOPS_WORKFLOW</h2>
+
+            <div class="workflow">
+
+Code → GitHub → Jenkins → Docker → Kubernetes → Monitoring → Production
+
+            </div>
+
+        </section>
+
+        <!-- Connect -->
+
+        <section>
+
+            <h2>CONNECT_WITH_ME</h2>
+
+            <div class="connect">
+
+                <a href="https://github.com/shubham990918">
+
+                    <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=ff003c"/>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/shubham-shinde-aa9071a3">
+
+                    <img src="https://img.shields.io/badge/LinkedIn-140000?style=for-the-badge&logo=linkedin&logoColor=ff003c"/>
+
+                </a>
+
+                <a href="mailto:shubham.shinde051995@gmail.com">
+
+                    <img src="https://img.shields.io/badge/Gmail-000000?style=for-the-badge&logo=gmail&logoColor=ff003c"/>
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Contribution Graph -->
+
+        <section class="graph">
+
+            <h2>CONTRIBUTION_GRAPH</h2>
+
+            <img src="https://github-readme-activity-graph.vercel.app/graph?username=shubham990918&bg_color=000000&color=ff003c&line=ff003c&point=ffffff&area=true&hide_border=true"/>
+
+        </section>
+
+        <!-- Snake -->
+
+        <section class="snake">
+
+            <h2>CONTRIBUTION_SNAKE</h2>
+
+            <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg"/>
+
+        </section>
+
+        <!-- Profile Views -->
+
+        <section>
+
+            <h2>PROFILE_VIEWS</h2>
+
+            <div style="text-align:center;">
+
+                <img src="https://komarev.com/ghpvc/?username=shubham990918&label=PROFILE+VIEWS&color=8B0000&style=for-the-badge"/>
+
+            </div>
+
+        </section>
+
+        <!-- Quote -->
+
+        <section>
+
+            <h2>QUOTE</h2>
+
+            <div class="quote">
+
+"Automate everything. Secure everything. Monitor everything."
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <section class="footer">
+
+            <img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:000000,50:8B0000,100:ff003c"/>
+
+        </section>
+
+    </div>
 
 </body>
+
 </html>
