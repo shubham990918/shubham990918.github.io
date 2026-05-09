@@ -5,10 +5,14 @@
 
     <meta charset="UTF-8" />
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Shubham Shinde</title>
+    <title>Shubham Shinde | Middleware Engineer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
 
@@ -18,56 +22,140 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
 
-            background: #050505;
+            background:
+            radial-gradient(circle at top right, rgba(255, 0, 60, 0.15), transparent 30%),
+            radial-gradient(circle at bottom left, rgba(255, 0, 60, 0.08), transparent 25%),
+            #050505;
 
-            color: white;
+            color: #ffffff;
 
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
 
             line-height: 1.7;
 
             overflow-x: hidden;
         }
 
+        a {
+            text-decoration: none;
+        }
+
         .container {
 
-            width: 90%;
+            width: 92%;
 
             max-width: 1300px;
 
             margin: auto;
-
-            padding-bottom: 100px;
         }
 
-        section {
+        /* ============================ */
+        /* NAVBAR */
+        /* ============================ */
 
-            margin-top: 80px;
+        .navbar {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            backdrop-filter: blur(10px);
+
+            background: rgba(0, 0, 0, 0.7);
+
+            border-bottom: 1px solid rgba(255, 0, 60, 0.2);
         }
 
-        h1, h2 {
+        .nav-wrapper {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 18px 0;
+        }
+
+        .logo {
 
             color: #ff003c;
 
-            margin-bottom: 25px;
+            font-size: 24px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 28px;
+        }
+
+        .nav-links a {
+
+            color: #d1d5db;
+
+            transition: 0.3s;
+
+            font-size: 15px;
+
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+
+            color: #ff003c;
+        }
+
+        /* ============================ */
+        /* HERO SECTION */
+        /* ============================ */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
 
             text-align: center;
+
+            position: relative;
+        }
+
+        .hero-content {
+
+            width: 100%;
         }
 
         .banner img {
 
             width: 100%;
 
-            border-radius: 20px;
+            border-radius: 24px;
+
+            box-shadow:
+            0 0 25px rgba(255, 0, 60, 0.2);
         }
 
         .typing {
 
-            text-align: center;
-
-            margin-top: 30px;
+            margin-top: 35px;
         }
 
         .typing img {
@@ -75,47 +163,145 @@
             max-width: 100%;
         }
 
+        /* ============================ */
+        /* SECTION STYLING */
+        /* ============================ */
+
+        section {
+
+            padding: 90px 0;
+        }
+
+        .section-title {
+
+            text-align: center;
+
+            font-size: 42px;
+
+            margin-bottom: 50px;
+
+            font-weight: 800;
+
+            color: #ff003c;
+
+            letter-spacing: 2px;
+        }
+
+        .card {
+
+            background: rgba(10, 10, 10, 0.8);
+
+            border: 1px solid rgba(255, 0, 60, 0.2);
+
+            border-radius: 24px;
+
+            padding: 35px;
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+            0 0 25px rgba(255, 0, 60, 0.08);
+        }
+
+        /* ============================ */
+        /* ABOUT */
+        /* ============================ */
+
         .terminal {
 
             background: #000000;
 
             border: 1px solid #8B0000;
 
-            padding: 30px;
+            border-radius: 18px;
 
-            border-radius: 15px;
+            padding: 30px;
 
             overflow-x: auto;
 
             color: #00ff99;
 
-            font-family: monospace;
+            font-family: 'Fira Code', monospace;
 
             white-space: pre-wrap;
+
+            font-size: 15px;
+
+            line-height: 1.8;
         }
 
-        .tech-stack,
-        .skills,
-        .connect {
+        /* ============================ */
+        /* TECH STACK */
+        /* ============================ */
+
+        .tech-stack {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+        }
+
+        .tech-stack img {
+
+            max-width: 100%;
+        }
+
+        /* ============================ */
+        /* SKILLS */
+        /* ============================ */
+
+        .skills-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+            gap: 20px;
+        }
+
+        .skill-card {
+
+            background: #0b0b0b;
+
+            border: 1px solid rgba(255, 0, 60, 0.2);
+
+            border-radius: 18px;
+
+            padding: 30px 20px;
 
             text-align: center;
+
+            transition: 0.3s ease;
         }
 
-        .tech-stack img,
-        .skills img,
-        .connect img {
+        .skill-card:hover {
 
-            margin: 10px;
+            transform: translateY(-8px);
+
+            border-color: #ff003c;
+
+            box-shadow:
+            0 0 20px rgba(255, 0, 60, 0.15);
         }
 
-        .stats img,
-        .graph img,
-        .snake img {
+        .skill-card h3 {
 
-            width: 100%;
+            color: #ffffff;
 
-            border-radius: 15px;
+            margin-top: 15px;
+
+            font-size: 18px;
         }
+
+        /* ============================ */
+        /* YAML + WORKFLOW */
+        /* ============================ */
 
         .yaml-box,
         .workflow,
@@ -125,25 +311,149 @@
 
             border-left: 5px solid #ff003c;
 
-            padding: 25px;
+            padding: 30px;
 
-            border-radius: 10px;
+            border-radius: 18px;
 
             overflow-x: auto;
 
-            font-family: monospace;
+            font-family: 'Fira Code', monospace;
 
             white-space: pre-wrap;
+
+            font-size: 15px;
         }
 
-        .footer {
+        /* ============================ */
+        /* CONNECT */
+        /* ============================ */
 
-            margin-top: 100px;
+        .connect {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
         }
 
-        .footer img {
+        .connect img {
+
+            transition: 0.3s ease;
+        }
+
+        .connect img:hover {
+
+            transform: scale(1.08);
+        }
+
+        /* ============================ */
+        /* FOOTER */
+        /* ============================ */
+
+        footer {
+
+            padding-top: 80px;
+        }
+
+        .footer-image img {
 
             width: 100%;
+        }
+
+        .footer-text {
+
+            text-align: center;
+
+            padding: 30px 0 60px;
+
+            color: #9ca3af;
+
+            font-size: 14px;
+        }
+
+        /* ============================ */
+        /* MOBILE RESPONSIVE */
+        /* ============================ */
+
+        @media(max-width: 992px) {
+
+            .section-title {
+
+                font-size: 34px;
+            }
+
+            .nav-links {
+
+                gap: 16px;
+            }
+        }
+
+        @media(max-width: 768px) {
+
+            .nav-wrapper {
+
+                flex-direction: column;
+
+                gap: 18px;
+            }
+
+            .nav-links {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 14px;
+            }
+
+            section {
+
+                padding: 70px 0;
+            }
+
+            .section-title {
+
+                font-size: 28px;
+            }
+
+            .card {
+
+                padding: 24px;
+            }
+
+            .terminal,
+            .yaml-box,
+            .workflow,
+            .quote {
+
+                font-size: 13px;
+
+                padding: 22px;
+            }
+        }
+
+        @media(max-width: 480px) {
+
+            .logo {
+
+                font-size: 20px;
+            }
+
+            .section-title {
+
+                font-size: 24px;
+            }
+
+            .terminal,
+            .yaml-box,
+            .workflow,
+            .quote {
+
+                font-size: 12px;
+            }
         }
 
     </style>
@@ -152,32 +462,61 @@
 
 <body>
 
-    <div class="container">
+    <!-- NAVBAR -->
 
-        <!-- Banner -->
+    <nav class="navbar">
 
-        <section class="banner">
+        <div class="container nav-wrapper">
 
-            <img src="https://capsule-render.vercel.app/api?type=waving&height=320&text=Shubham%20Shinde&fontSize=65&fontColor=ffffff&animation=twinkling&color=0:000000,25:140000,50:3b0000,75:8B0000,100:ff003c&desc=Middleware%20Engineer%20|%20Linux%20|%20AWS%20|%20DevOps%20|%20IAM%20|%20PAM&descAlignY=65&descSize=18">
+            <div class="logo">
+                SHUBHAM.SHINDE
+            </div>
 
-        </section>
+            <div class="nav-links">
 
-        <!-- Typing Animation -->
+                <a href="#about">About</a>
+                <a href="#stack">Stack</a>
+                <a href="#skills">Skills</a>
+                <a href="#operations">Operations</a>
+                <a href="#connect">Connect</a>
 
-        <section class="typing">
+            </div>
 
-            <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=2500&pause=1000&color=FF003C&center=true&vCenter=true&width=1000&lines=$+Booting+Cloud+Infrastructure...;$+Loading+DevOps+Modules...;$+Initializing+Security+Protocols...;$+Middleware+Engineer+Ready.;$+Automation+is+Power.">
+        </div>
 
-        </section>
+    </nav>
 
-        <!-- About -->
+    <!-- HERO -->
 
-        <section>
+    <section class="hero">
 
-            <h2>ABOUT_ME</h2>
+        <div class="container hero-content">
+
+            <div class="banner">
+
+                <img src="https://capsule-render.vercel.app/api?type=waving&height=320&text=Shubham%20Shinde&fontSize=65&fontColor=ffffff&animation=twinkling&color=0:000000,25:140000,50:3b0000,75:8B0000,100:ff003c&desc=Middleware%20Engineer%20|%20Linux%20|%20AWS%20|%20DevOps%20|%20IAM%20|%20PAM&descAlignY=65&descSize=18">
+
+            </div>
+
+            <div class="typing">
+
+                <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=2500&pause=1000&color=FF003C&center=true&vCenter=true&width=1000&lines=$+Booting+Cloud+Infrastructure...;$+Loading+DevOps+Modules...;$+Initializing+Security+Protocols...;$+Middleware+Engineer+Ready.;$+Automation+is+Power.">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">ABOUT ME</h2>
 
             <div class="terminal">
-
 ┌──(shubham㉿middleware)-[~/profile]
 └─$ whoami
 
@@ -205,61 +544,89 @@ Middleware Engineer
 └─$ echo $STATUS
 
 Building scalable, secure, and automated systems.
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TECH STACK -->
+
+    <section id="stack">
+
+        <div class="container">
+
+            <h2 class="section-title">TECH STACK</h2>
+
+            <div class="card">
+
+                <div class="tech-stack">
+
+                    <img src="https://skillicons.dev/icons?i=linux,aws,docker,kubernetes,bash,terraform,git,github,githubactions,jenkins,ansible,prometheus,grafana,py,vim"/>
+
+                </div>
 
             </div>
 
-        </section>
+        </div>
 
-        <!-- Tech Stack -->
+    </section>
 
-        <section>
+    <!-- SKILLS -->
 
-            <h2>TECH_STACK</h2>
+    <section id="skills">
 
-            <div class="tech-stack">
+        <div class="container">
 
-                <img src="https://skillicons.dev/icons?i=linux,aws,docker,kubernetes,bash,terraform,git,github,githubactions,jenkins,ansible,prometheus,grafana,py,vim"/>
+            <h2 class="section-title">CORE SKILLS</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <img src="https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=ff003c">
+                    <h3>Linux Administration</h3>
+                </div>
+
+                <div class="skill-card">
+                    <img src="https://img.shields.io/badge/AWS-111111?style=for-the-badge&logo=amazonaws&logoColor=ff003c">
+                    <h3>AWS Cloud</h3>
+                </div>
+
+                <div class="skill-card">
+                    <img src="https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=ff003c">
+                    <h3>Containerization</h3>
+                </div>
+
+                <div class="skill-card">
+                    <img src="https://img.shields.io/badge/Kubernetes-111111?style=for-the-badge&logo=kubernetes&logoColor=ff003c">
+                    <h3>Orchestration</h3>
+                </div>
+
+                <div class="skill-card">
+                    <img src="https://img.shields.io/badge/Terraform-000000?style=for-the-badge&logo=terraform&logoColor=ff003c">
+                    <h3>Infrastructure as Code</h3>
+                </div>
+
+                <div class="skill-card">
+                    <img src="https://img.shields.io/badge/Jenkins-111111?style=for-the-badge&logo=jenkins&logoColor=ff003c">
+                    <h3>CI/CD Automation</h3>
+                </div>
 
             </div>
 
-        </section>
+        </div>
 
-        <!-- Core Skills -->
+    </section>
 
-        <section>
+    <!-- OPERATIONS -->
 
-            <h2>CORE_SKILLS</h2>
+    <section id="operations">
 
-            <div class="skills">
+        <div class="container">
 
-                <img src="https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=ff003c"/>
-
-                <img src="https://img.shields.io/badge/Oracle%20WebLogic-000000?style=for-the-badge&logo=Oracle&logoColor=ff003c"/>
-
-                <img src="https://img.shields.io/badge/AWS-111111?style=for-the-badge&logo=amazonaws&logoColor=ff003c"/>
-
-                <img src="https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=ff003c"/>
-
-                <img src="https://img.shields.io/badge/Kubernetes-111111?style=for-the-badge&logo=kubernetes&logoColor=ff003c"/>
-
-                <img src="https://img.shields.io/badge/Terraform-000000?style=for-the-badge&logo=terraform&logoColor=ff003c"/>
-
-                <img src="https://img.shields.io/badge/Jenkins-111111?style=for-the-badge&logo=jenkins&logoColor=ff003c"/>
-
-                <img src="https://img.shields.io/badge/Ansible-000000?style=for-the-badge&logo=ansible&logoColor=ff003c"/>
-
-            </div>
-
-        </section>
-        
-        <!-- Current Operations -->
-
-        <section>
-
-            <h2>CURRENT_OPERATIONS</h2>
+            <h2 class="section-title">CURRENT OPERATIONS</h2>
 
             <div class="yaml-box">
-
 infrastructure:
   cloud: AWS
   os: Linux
@@ -277,78 +644,87 @@ status:
   automation_level: MAXIMUM
   infrastructure_state: STABLE
   deployment_status: ONLINE
-
             </div>
 
-        </section>
+        </div>
 
-        <!-- Workflow -->
+    </section>
 
-        <section>
+    <!-- WORKFLOW -->
 
-            <h2>DEVOPS_WORKFLOW</h2>
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">DEVOPS WORKFLOW</h2>
 
             <div class="workflow">
-
 Code → GitHub → Jenkins → Docker → Kubernetes → Monitoring → Production
-
             </div>
 
-        </section>
+        </div>
 
-        <!-- Connect -->
+    </section>
 
-        <section>
+    <!-- CONNECT -->
 
-            <h2>CONNECT_WITH_ME</h2>
+    <section id="connect">
+
+        <div class="container">
+
+            <h2 class="section-title">CONNECT WITH ME</h2>
 
             <div class="connect">
 
-                <a href="https://github.com/shubham990918">
-
+                <a href="https://github.com/shubham990918" target="_blank">
                     <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=ff003c"/>
-
                 </a>
 
-                <a href="https://www.linkedin.com/in/shubham-shinde-aa9071a3">
-
+                <a href="https://www.linkedin.com/in/shubham-shinde-aa9071a3" target="_blank">
                     <img src="https://img.shields.io/badge/LinkedIn-140000?style=for-the-badge&logo=linkedin&logoColor=ff003c"/>
-
                 </a>
 
                 <a href="mailto:shubham.shinde051995@gmail.com">
-
                     <img src="https://img.shields.io/badge/Gmail-000000?style=for-the-badge&logo=gmail&logoColor=ff003c"/>
-
                 </a>
 
             </div>
 
-        </section>
+        </div>
 
-        <!-- Quote -->
+    </section>
 
-        <section>
+    <!-- QUOTE -->
 
-            <h2>QUOTE</h2>
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">QUOTE</h2>
 
             <div class="quote">
-
 "Automate everything. Secure everything. Monitor everything."
-
             </div>
 
-        </section>
+        </div>
 
-        <!-- Footer -->
+    </section>
 
-        <section class="footer">
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-image">
 
             <img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:000000,50:8B0000,100:ff003c"/>
 
-        </section>
+        </div>
 
-    </div>
+        <div class="footer-text">
+            © 2026 Shubham Shinde | Middleware Engineer | DevOps Portfolio
+        </div>
+
+    </footer>
 
 </body>
 
